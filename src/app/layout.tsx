@@ -7,12 +7,19 @@ import { ProjectProvider } from '@/context/project-context'
 import { Navbar } from '@/components/navbar'
 
 export const metadata: Metadata = {
-  title: 'Eu Gênio - Solucionador Simplex',
-  description: 'Sistema de resolução de problemas de programação linear pelo método Simplex.',
+  title: 'Eu Gênio — Solucionador Simplex',
+  description: 'Resolva problemas de Programação Linear pelo método Simplex com visualização passo a passo, gráfico da região viável, dualidade, análise de sensibilidade e Branch & Bound.',
+  keywords: ['simplex', 'programação linear', 'pesquisa operacional', 'otimização', 'dualidade', 'branch and bound'],
+  authors: [{ name: 'Eu Gênio' }],
+  openGraph: {
+    title: 'Eu Gênio — Solucionador Simplex',
+    description: 'Resolva problemas de Programação Linear com visualização passo a passo.',
+    type: 'website',
+    locale: 'pt_BR',
+  },
   icons: {
     icon: '/logo-eu-genio.png',
   },
-  generator: 'v0.app',
 }
 
 export default function RootLayout({
@@ -21,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <ProjectProvider>
           <Navbar />

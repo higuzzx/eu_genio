@@ -154,3 +154,45 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ── Print / Export PDF ─────────────────────────── */
+@media print {
+  header, footer, nav, button, [data-noprint] {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #1e293b !important;
+    font-family: 'Geist Mono', monospace;
+  }
+  [data-printcard] {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px;
+    color: #1e293b !important;
+    page-break-inside: avoid;
+    margin-bottom: 16px;
+  }
+  [data-printcard] * {
+    color: #1e293b !important;
+    border-color: #e2e8f0 !important;
+  }
+  [data-printshow] {
+    display: block !important;
+  }
+  .text-blue-400, .text-emerald-400, .text-purple-400, .text-amber-300 {
+    color: #1e40af !important;
+  }
+  .text-slate-300, .text-slate-200, .text-white {
+    color: #1e293b !important;
+  }
+  .text-slate-400, .text-slate-500, .text-slate-600 {
+    color: #475569 !important;
+  }
+  .bg-slate-900\/80, .bg-slate-900, .bg-slate-800\/25, .bg-slate-800\/20, .bg-slate-800\/30 {
+    background: transparent !important;
+  }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #e2e8f0 !important; padding: 6px 10px; }
+  thead { background: #f1f5f9 !important; }
+}
